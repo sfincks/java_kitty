@@ -11,7 +11,7 @@ public class Cat {
     public Cat(String name, int appetite) {
         this.name = name;
         this.appetite = appetite;
-        satiety = 4;
+        satiety = 5;
         hunger = (appetite / 10) * satiety;
     }
 
@@ -28,7 +28,7 @@ public class Cat {
         }else {
             plate.decreaseFood(hunger);
             System.out.println("MIAY c:");
-            satiety = 0;
+            satiety -= plate.decreaseFood(hunger)/10;
         }
 //        else if (plate.decreaseFood(hunger) == 0) {
 //            System.out.println("No food T.T");
